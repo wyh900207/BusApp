@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseNavigationController.swift
 //  BusApp
 //
 //  Created by HomerLynn on 2017/10/26.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 设置导航风格
+        navigation(with: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

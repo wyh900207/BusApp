@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F49AA0EF0AF89339115B7C6 /* ThemeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49ABFB83A08F7D56BF3907 /* ThemeStyle.swift */; };
 		900EFE281FA1D3EC007C8AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFE271FA1D3EC007C8AE0 /* AppDelegate.swift */; };
-		900EFE2A1FA1D3EC007C8AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFE291FA1D3EC007C8AE0 /* ViewController.swift */; };
 		900EFE2D1FA1D3EC007C8AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900EFE2B1FA1D3EC007C8AE0 /* Main.storyboard */; };
 		900EFE2F1FA1D3EC007C8AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900EFE2E1FA1D3EC007C8AE0 /* Assets.xcassets */; };
 		900EFE321FA1D3EC007C8AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900EFE301FA1D3EC007C8AE0 /* LaunchScreen.storyboard */; };
+		900EFE4A1FA1DD6E007C8AE0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFE491FA1DD6E007C8AE0 /* BaseNavigationController.swift */; };
+		900EFE4C1FA1E15A007C8AE0 /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFE4B1FA1E15A007C8AE0 /* NavigationControllerProtocol.swift */; };
+		900EFE501FA1E259007C8AE0 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900EFE4F1FA1E259007C8AE0 /* UINavigationController.swift */; };
+		90AA36AE1FA31C9900A4FA25 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA36AD1FA31C9900A4FA25 /* HomePageViewController.swift */; };
+		90AA36B01FA31CC500A4FA25 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA36AF1FA31CC500A4FA25 /* HomepageViewModel.swift */; };
+		90AA36B21FA330FA00A4FA25 /* TimeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA36B11FA330FA00A4FA25 /* TimeListViewController.swift */; };
 		CFBA0EA3ECC4400A236157E5 /* Pods_BusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629EF9CAFB2FC25BF4391A28 /* Pods_BusApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		629EF9CAFB2FC25BF4391A28 /* Pods_BusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F49ABFB83A08F7D56BF3907 /* ThemeStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeStyle.swift; sourceTree = "<group>"; };
 		900EFE241FA1D3EC007C8AE0 /* BusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900EFE271FA1D3EC007C8AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		900EFE291FA1D3EC007C8AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		900EFE2C1FA1D3EC007C8AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		900EFE2E1FA1D3EC007C8AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		900EFE311FA1D3EC007C8AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		900EFE331FA1D3EC007C8AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		900EFE491FA1DD6E007C8AE0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		900EFE4B1FA1E15A007C8AE0 /* NavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerProtocol.swift; sourceTree = "<group>"; };
+		900EFE4F1FA1E259007C8AE0 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		90AA36AD1FA31C9900A4FA25 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		90AA36AF1FA31CC500A4FA25 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		90AA36B11FA330FA00A4FA25 /* TimeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListViewController.swift; sourceTree = "<group>"; };
 		A4831B0B504C4278CA6C2BD6 /* Pods-BusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusApp/Pods-BusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D09992ED1834E99A558FC8A0 /* Pods-BusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusApp/Pods-BusApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +90,7 @@
 		900EFE261FA1D3EC007C8AE0 /* BusApp */ = {
 			isa = PBXGroup;
 			children = (
+				900EFE551FA1E389007C8AE0 /* Enums */,
 				900EFE3F1FA1D473007C8AE0 /* Controllers */,
 				900EFE3E1FA1D46A007C8AE0 /* ViewModels */,
 				900EFE3D1FA1D45C007C8AE0 /* Views */,
@@ -97,6 +110,7 @@
 		900EFE391FA1D429007C8AE0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				900EFE4F1FA1E259007C8AE0 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -104,6 +118,7 @@
 		900EFE3A1FA1D442007C8AE0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				900EFE4B1FA1E15A007C8AE0 /* NavigationControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -118,6 +133,7 @@
 		900EFE3C1FA1D455007C8AE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F49ABFB83A08F7D56BF3907 /* ThemeStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +148,7 @@
 		900EFE3E1FA1D46A007C8AE0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				90AA36AF1FA31CC500A4FA25 /* HomepageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -139,7 +156,9 @@
 		900EFE3F1FA1D473007C8AE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				900EFE291FA1D3EC007C8AE0 /* ViewController.swift */,
+				900EFE481FA1DD47007C8AE0 /* BaseNavigationController */,
+				90AA36AD1FA31C9900A4FA25 /* HomePageViewController.swift */,
+				90AA36B11FA330FA00A4FA25 /* TimeListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +201,21 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		900EFE481FA1DD47007C8AE0 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				900EFE491FA1DD6E007C8AE0 /* BaseNavigationController.swift */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		900EFE551FA1E389007C8AE0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				900EFE2A1FA1D3EC007C8AE0 /* ViewController.swift in Sources */,
+				900EFE501FA1E259007C8AE0 /* UINavigationController.swift in Sources */,
+				90AA36B21FA330FA00A4FA25 /* TimeListViewController.swift in Sources */,
 				900EFE281FA1D3EC007C8AE0 /* AppDelegate.swift in Sources */,
+				90AA36AE1FA31C9900A4FA25 /* HomePageViewController.swift in Sources */,
+				90AA36B01FA31CC500A4FA25 /* HomepageViewModel.swift in Sources */,
+				900EFE4A1FA1DD6E007C8AE0 /* BaseNavigationController.swift in Sources */,
+				900EFE4C1FA1E15A007C8AE0 /* NavigationControllerProtocol.swift in Sources */,
+				7F49AA0EF0AF89339115B7C6 /* ThemeStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
