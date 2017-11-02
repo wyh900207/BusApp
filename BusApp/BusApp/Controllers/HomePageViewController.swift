@@ -8,16 +8,37 @@
 
 import UIKit
 
+/// All views common settings.
+fileprivate struct UIConfig {
+    static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
+    static let labelConfig: (UILabel) -> Void = { label in
+        label.backgroundColor = .white
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.textColor = .lightGray
+    }
+    static let buttonConfig: (UIButton) -> Void = { button in
+        button.backgroundColor = UIColor.white
+        button.titleLabel!.font = UIFont.systemFont(ofSize: 20)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(HomePageViewController.self, action: #selector(HomePageViewController.taped(button:)), for: .touchUpInside)
+        button.setTitle("查询", for: .normal)
+        button.contentHorizontalAlignment = .left
+    }
+}
+
 class HomePageViewController: UIViewController {
     enum ButtonTag: Int {
         case from = 101, to, date, exchange, query
     }
 
-    typealias ButtonConfigClosure = (UIButton) -> Void
-
     /// All subview in self view.
     lazy var topImageView: UIImageView = UIImageView()
     lazy var middleView: UIView = UIView()
+
+    lazy var fromLabel: UILabel = UILabel()
+    lazy var toLabel: UILabel = UILabel()
+    lazy var dateLabel: UILabel = UILabel()
 
     lazy var fromCityButton: UIButton = UIButton()
     lazy var toCityButton: UIButton = UIButton()
@@ -28,15 +49,6 @@ class HomePageViewController: UIViewController {
     /// View model
     var homepageVM = HomepageViewModel()
 
-    let buttonConfig: ButtonConfigClosure = { button in
-        button.backgroundColor = UIColor.white
-        button.titleLabel!.font = UIFont.systemFont(ofSize: 20)
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(taped(button:)), for: .touchUpInside)
-        button.setTitle("查询", for: .normal)
-        button.contentHorizontalAlignment = .left
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "汽车票"
@@ -45,7 +57,6 @@ class HomePageViewController: UIViewController {
 
     /// Config subviews
     fileprivate func setupUI() {
-        let screenWidth: CGFloat = UIScreen.main.bounds.size.width
         topImageView
             .config { (imageView: UIImageView) in
                 imageView.backgroundColor = .orange
@@ -53,7 +64,7 @@ class HomePageViewController: UIViewController {
             .add(to: view)
             .layout { maker in
                 maker.top.left.right.equalToSuperview()
-                maker.height.equalTo(screenWidth * 0.5)
+                maker.height.equalTo(UIConfig.screenWidth * 0.5)
             }
         middleView
             .config { (view: UIView) in
@@ -68,18 +79,28 @@ class HomePageViewController: UIViewController {
                 maker.right.equalToSuperview().offset(-10)
             }
         fromCityButton
-            .config(config: buttonConfig)
+            .config(config: UIConfig.buttonConfig)
             .config { (button: UIButton) in
                 button.setTitle("出发", for: .normal)
                 button.tag = 101
             }
             .add(to: middleView)
             .layout { maker in
-                maker.top.left.right.equalToSuperview()
+                maker.top.equalToSuperview()
+                maker.right.equalToSuperview().offset(-15)
                 maker.height.equalTo(40)
             }
+        fromLabel
+            .config(config: UIConfig.labelConfig)
+            .add(to: middleView)
+            .layout { maker in
+                maker.centerY.equalTo(view)
+                maker.left.equalToSuperview().offset(15)
+                maker.width.equalTo(60)
+                maker.right.equalTo(self.fromCityButton.snp.left).offset(-15)
+            }
         toCityButton
-            .config(config: buttonConfig)
+            .config(config: UIConfig.buttonConfig)
             .config { (button: UIButton) in
                 button.setTitle("到达", for: .normal)
                 button.tag = 102
@@ -87,10 +108,19 @@ class HomePageViewController: UIViewController {
             .add(to: middleView)
             .layout { maker in
                 maker.top.equalTo(self.fromCityButton.snp.bottom)
-                maker.left.right.height.equalTo(self.fromCityButton)
+                maker.right.height.equalTo(self.fromCityButton)
+            }
+        toLabel
+            .config(config: UIConfig.labelConfig)
+            .add(to: middleView)
+            .layout { maker in
+                maker.centerY.equalTo(view)
+                maker.left.equalToSuperview().offset(15)
+                maker.width.equalTo(60)
+                maker.right.equalTo(self.toCityButton.snp.left).offset(-15)
             }
         datePickButton
-            .config(config: buttonConfig)
+            .config(config: UIConfig.buttonConfig)
             .config { (button: UIButton) in
                 button.setTitle("11月25日", for: .normal)
                 button.tag = 103
@@ -98,17 +128,26 @@ class HomePageViewController: UIViewController {
             .add(to: middleView)
             .layout { maker in
                 maker.top.equalTo(self.toCityButton.snp.bottom)
-                maker.left.right.height.equalTo(self.toCityButton)
+                maker.right.height.equalTo(self.toCityButton)
+            }
+        dateLabel
+            .config(config: UIConfig.labelConfig)
+            .add(to: middleView)
+            .layout { maker in
+                maker.centerY.equalTo(view)
+                maker.left.equalToSuperview().offset(15)
+                maker.width.equalTo(60)
+                maker.right.equalTo(self.datePickButton.snp.left).offset(-15)
             }
         exchangeButton
-            .config(config: buttonConfig)
+            .config(config: UIConfig.buttonConfig)
             .config { (button: UIButton) in
                 button.setImage(nil, for: .normal)
                 button.tag = 104
             }
             .add(to: middleView)
         queryButton
-            .config(config: buttonConfig)
+            .config(config: UIConfig.buttonConfig)
             .config { (button: UIButton) in
                 button.backgroundColor = .GreenColor
                 button.setTitleColor(.white, for: .normal)
